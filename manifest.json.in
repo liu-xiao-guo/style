@@ -1,0 +1,17 @@
+{
+    "name": "style.liu-xiao-guo",
+    "description": "description of style",
+    "architecture": "@CLICK_ARCH@",
+    "title": "style",
+    "hooks": {
+        "style": {
+            "apparmor": "style/style.apparmor",
+            "desktop":  "style/style.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-15.04"
+}
+
+
