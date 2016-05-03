@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 13:19+0800\n"
+"POT-Creation-Date: 2016-05-03 11:39+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/liuxg/qml/build-style-Ubuntu_Device4_GCC_armhf_ubuntu_sdk_15_04_vivid-Debug/style/style.desktop.h:1
+#: /home/liuxg/qml/style/style/Main.qml:26
+msgid "pageheaderstyle"
+msgstr ""
+
+#: /home/liuxg/qml/build-style-UbuntuSDK_for_armhf_GCC_ubuntu_sdk_15_04_vivid-Debug/style/style.desktop.h:1
 msgid "style"
 msgstr ""

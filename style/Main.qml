@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Themes 1.3
+import Ubuntu.Components.Styles 1.3
 
 MainView {
     // objectName for functional testing purposes (autopilot-qt5)
@@ -9,8 +10,8 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "style.liu-xiao-guo"
 
-    width: units.gu(100)
-    height: units.gu(75)
+    width: units.gu(60)
+    height: units.gu(85)
 
     Action {
         id: action1
@@ -20,26 +21,60 @@ MainView {
     }
 
     Page {
-        title: "test page"
-        Label {
-            anchors.centerIn: parent
-            text: "Hello, world"
+        header: PageHeader {
+            id: pageHeader
+            title: i18n.tr("pageheaderstyle")
+
+            style: PageHeaderStyle {
+                foregroundColor: UbuntuColors.orange
+                backgroundColor: UbuntuColors.porcelain
+                dividerColor: UbuntuColors.slate
+                contentHeight: units.gu(10)
+                Label {
+                    anchors.centerIn: parent
+                    fontSize: "x-large"
+                    text: styledItem.title
+                }
+                implicitHeight: contentHeight
+            }
         }
 
-        StyledItem {
-            text: "Press to reset"
-            style: Rectangle {
-                color: "tan"
-                Label {
-                    anchors {
-                        fill: parent
-                        margins: units.gu(1)
-                    }
-                    text: styledItem.text
+        Image {
+            id: pressed
+            source: "images/pressed.jpg"
+            visible: false
+        }
+
+        Image {
+            id: unpressed
+            source: "images/unpressed.jpg"
+            visible: false
+        }
+
+        Column {
+            anchors.centerIn: parent
+            spacing: units.gu(5)
+
+            Button {
+                id: button1
+                width: units.gu(40)
+                height: units.gu(15)
+                text: "Nice"
+                StyleHints {
+                    defaultColor: button1.pressed ? "blue" : "red"
                 }
             }
-            onClicked: style = undefined
-        }
 
+            Button {
+                id: button2
+                width: units.gu(40)
+                height: units.gu(15)
+                text: "Nice"
+                StyleHints {
+                    backgroundSource: button2.pressed ? pressed : unpressed
+                }
+            }
+        }
     }
 }
+
